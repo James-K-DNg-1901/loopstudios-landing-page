@@ -1,0 +1,204 @@
+$font-1: "Alata", sans-serif;
+$font-2: "Josefin Sans", sans-serif;
+$primary-color-1: hsl(0, 0%, 55%);
+$primary-color-2: hsl(0, 0%, 41%);
+$fs-default: 15px;
+$mobile: 850px;
+
+body {
+  min-height: 100vh;
+  min-width: 100dw;
+}
+
+// header style
+header {
+  background-image: url("./assets/images/desktop/image-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+  padding: 4rem 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: $mobile) {
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("./assets/images/mobile/image-hero.jpg");
+    padding: 2rem 1rem;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      @media (max-width: 849px) {
+        width: 10em;
+        z-index: 50;
+      }
+    }
+
+    .nav-menu {
+      font-family: $font-1;
+      text-underline-offset: 15px;
+      color: white;
+      width: 24rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div:hover {
+        cursor: pointer;
+        text-decoration: underline 3px;
+      }
+      @media (max-width: $mobile) {
+        position: fixed;
+        top: 0;
+        left: -25rem;
+        background-color: black;
+        width: 22.5rem;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+        padding-left: 2rem;
+        font-size: x-large;
+        text-transform: uppercase;
+        z-index: 40;
+        transition: all;
+        transition-duration: 2s;
+      }
+    }
+    .show-menu {
+      font-family: $font-1;
+      text-underline-offset: 15px;
+      color: white;
+      width: 24rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div:hover {
+        cursor: pointer;
+        text-decoration: underline 3px;
+      }
+      @media (max-width: $mobile) {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        width: 22.5rem;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+        padding-left: 2rem;
+        font-size: x-large;
+        text-transform: uppercase;
+        z-index: 40;
+        transition: all;
+        transition-duration: 2s;
+      }
+    }
+
+    .mobile-menu {
+      width: 2rem;
+      opacity: 0;
+      position: fixed;
+      cursor: pointer;
+      @media (max-width: $mobile) {
+        opacity: 1;
+        position: relative;
+        z-index: 50;
+      }
+    }
+  }
+
+  .title {
+    width: 30rem;
+    padding: 1rem 2rem;
+    color: white;
+    font-family: $font-2;
+    font-size: 4rem;
+    border: solid white;
+    @media (max-width: $mobile) {
+      width: 16.5rem;
+      font-size: 2.5rem;
+      padding: 1rem 1rem;
+    }
+  }
+}
+
+// main style
+main {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+
+  .interactive-container {
+    width: 55rem;
+    height: 30rem;
+    position: relative;
+    @media (max-width: 949px) {
+      height: 30rem;
+      width: 20rem;
+    }
+
+    .img-style {
+      width: 35rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @media (max-width: 949px) {
+        width: 20rem;
+      }
+    }
+
+    .main-content {
+      width: 28rem;
+      height: 20rem;
+      background-color: white;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-family: $font-2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 949px) {
+        width: 20rem;
+        height: 15rem;
+        text-align: center;
+      }
+
+      h1 {
+        width: 22rem;
+        text-transform: uppercase;
+        @media (max-width: 949px) {
+          width: 20rem;
+        }
+      }
+
+      p {
+        width: 22rem;
+        color: $primary-color-2;
+        font-size: 12px;
+        line-height: 1.3;
+        word-spacing: 1px;
+        @media (max-width: 949px) {
+          width: 20rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.creattions-style {
+  display: flex;
+  gap: 1rem;
+  @media (max-width: 849px) {
+    flex-direction: column;
+  }
+}

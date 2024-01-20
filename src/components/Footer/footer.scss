@@ -1,0 +1,73 @@
+$font-2: "Josefin Sans", sans-serif;
+footer {
+  background-color: black;
+  padding: 3rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 849px) {
+    padding: 3rem 0;
+    flex-direction: column;
+  }
+
+  .page-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @media (max-width: 849px) {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-style {
+      width: 10rem;
+    }
+    .footer-menu {
+      font-family: $font-2;
+      color: white;
+      width: 25rem;
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 849px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .menu-element:hover {
+        cursor: pointer;
+        text-underline-offset: 15px;
+        text-decoration: underline 3px;
+      }
+    }
+  }
+
+  .list-style {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media (max-width: 849px) {
+      align-items: center;
+      margin-top: 3rem;
+    }
+
+    .icon-list {
+      height: 3rem;
+      width: 13rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .contact-style:hover {
+        width: 2rem;
+        transition: all;
+        transition-duration: 2s;
+        cursor: pointer;
+      }
+    }
+
+    p {
+      color: white;
+    }
+  }
+}

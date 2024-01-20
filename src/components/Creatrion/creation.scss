@@ -1,0 +1,26 @@
+$font-2: "Josefin Sans", sans-serif;
+
+.creation-style {
+  width: auto;
+  position: relative;
+
+  img {
+    width: 13rem;
+    @media (max-width: 849px) {
+      width: 20rem;
+    }
+  }
+  h3 {
+    width: 8rem;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+    font-family: $font-2;
+    text-transform: uppercase;
+    @media (max-width: 849px) {
+      bottom: -1rem;
+    }
+  }
+}
